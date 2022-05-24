@@ -1,1 +1,0 @@
-import{r as l,h as n}from"./p-c6c344a2.js";let o=class{constructor(n){l(this,n)}render(){return n("mynt-make-post-dropdown",null,n("ion-item",null,n("ion-label",null,"Mark as NSFW?"),n("ion-checkbox",null)))}};o.style=":host{display:block}";export{o as mynt_mark_nsfw}

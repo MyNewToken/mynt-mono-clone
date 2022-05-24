@@ -1,1 +1,0 @@
-import{r,h as t}from"./p-c6c344a2.js";let s=class{constructor(t){r(this,t)}render(){return t("mynt-page",null)}};s.style=":host{display:block}";export{s as mynt_profile}

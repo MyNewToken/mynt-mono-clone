@@ -1,1 +1,0 @@
-import{r as t,h as s}from"./p-c6c344a2.js";let i=class{constructor(s){t(this,s),this.profImg="",this.name=""}render(){return s("ion-item",null,s("profile-pic",{source:this.profImg}),s("ion-card-title",null,this.name))}};i.style=":host{display:block}";export{i as mynt_dm}

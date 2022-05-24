@@ -1,1 +1,0 @@
-import{r as t,h as i}from"./p-c6c344a2.js";let s=class{constructor(i){t(this,i),this.coinImg="",this.coinTitle=""}render(){return i("ion-item",null,i("profile-pic",{source:this.coinImg}),i("ion-card-title",null,this.coinTitle))}};s.style=":host{display:block}";export{s as wallet_coin}

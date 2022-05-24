@@ -16,7 +16,7 @@ export const config: Config = {
     },
      */
     {
-      type: 'dist',
+      type: 'dist-custom-elements',
       //dir: '../mynt-qwik/dist/stencil-components'
     },
     {

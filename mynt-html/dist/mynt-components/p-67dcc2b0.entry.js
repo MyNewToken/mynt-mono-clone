@@ -1,1 +1,0 @@
-import{r as t,h as s}from"./p-c6c344a2.js";let r=class{constructor(s){t(this,s)}render(){return s("mynt-viewing-restrictions",null,s("ion-input",{placeholder:"Send to..."}))}};r.style=":host{display:block}";export{r as mynt_send_asset}

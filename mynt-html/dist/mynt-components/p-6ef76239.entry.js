@@ -1,1 +1,0 @@
-import{r as t,h as s,H as o}from"./p-c6c344a2.js";let r=class{constructor(s){t(this,s)}render(){return s(o,null,s("slot",null))}};r.style=":host{display:block}";export{r as mynt_dm_noti_button}

@@ -1,1 +1,0 @@
-import{r as t,h as r}from"./p-c6c344a2.js";let s=class{constructor(r){t(this,r),this.data=[],this.numCols=0}render(){for(var t=0;t<this.numCols;t++)this.data.push(r("mynt-watch-thumb",null));return r("ion-row",null,this.data.map((t=>r("ion-col",null,t))))}};s.style=":host{display:block}";export{s as mynt_watch_row}
