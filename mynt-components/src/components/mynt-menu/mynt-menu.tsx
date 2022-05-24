@@ -83,6 +83,9 @@ export class MyntMenu {
           <ion-button shape="round" onClick={() => this.presentDMs()}><ion-icon name="chatbubbles-outline"></ion-icon></ion-button>
           <ion-button onClick={() => this.presentSignin(true)}>Create Account</ion-button>
           <ion-button onClick={() => this.presentSignin(false)}>Sign In</ion-button>
+          <ion-tab-button tab="my-profile">
+            <ion-label>Profile</ion-label>
+          </ion-tab-button>
         </ion-tab-bar>
       </ion-tabs>
     );

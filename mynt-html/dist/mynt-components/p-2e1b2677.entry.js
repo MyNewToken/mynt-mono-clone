@@ -1,0 +1,1 @@
+import{r as n,h as r}from"./p-c6c344a2.js";let o=class{constructor(r){n(this,r)}render(){return r("ion-card",null,r("ion-card-header",null,r("ion-input",null)))}};o.style=":host{display:block}";export{o as mynt_comment_section}

@@ -17,11 +17,11 @@ export class MyntAssets {
   }
 
   pushData() {
-    const max = this.data.length + 20;
-    const min = max - 20;
+    const max = this.data.length + 5;
+    const min = max - 5;
 
     for (var i = min; i < max; i++) {
-      this.data.push(<mynt-grid-row numCols={4}></mynt-grid-row>);
+      this.data.push(<mynt-grid-row numCols={10}></mynt-grid-row>);
     }
 
     // Stencil does not re-render when pushing to an array

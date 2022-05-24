@@ -1,0 +1,1 @@
+import{r as l,h as i}from"./p-c6c344a2.js";let t=class{constructor(i){l(this,i)}render(){return i("ion-item",null,i("profile-pic",{source:this.assImg}),i("ion-list",null,i("ion-label",null,i("b",null,this.ttle)),i("ion-label",null,this.txt)))}};t.style=":host{display:block}";export{t as mynt_noti}

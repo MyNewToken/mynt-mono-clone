@@ -1,0 +1,1 @@
+import{r as s,h as r,H as t}from"./p-c6c344a2.js";let l=class{constructor(r){s(this,r)}render(){return r(t,null,r("slot",null))}};l.style=":host{display:block}";export{l as mynt_page_menu}

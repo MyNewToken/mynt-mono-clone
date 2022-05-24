@@ -12,6 +12,7 @@
  - [mynt-assets](../mynt-assets)
  - [mynt-feed](../mynt-feed)
  - [mynt-market](../mynt-market)
+ - [mynt-profile](../mynt-profile)
  - [mynt-watch](../mynt-watch)
 
 ### Depends on
@@ -29,6 +30,7 @@ graph TD;
   mynt-assets --> mynt-page
   mynt-feed --> mynt-page
   mynt-market --> mynt-page
+  mynt-profile --> mynt-page
   mynt-watch --> mynt-page
   style mynt-page fill:#f9f,stroke:#333,stroke-width:4px
 ```

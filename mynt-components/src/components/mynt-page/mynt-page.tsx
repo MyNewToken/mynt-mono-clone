@@ -12,8 +12,8 @@ export class MyntPage {
       <Host>
         <ion-grid>
           <ion-row>
-            <ion-col class="-side" size="2"><slot name="side"></slot></ion-col>
-            <ion-col class="-main" size="10"><slot name="main"></slot></ion-col>
+            <ion-col class="-side" size="3"><slot name="side"></slot></ion-col>
+            <ion-col class="-main" size="9"><slot name="main"></slot></ion-col>
           </ion-row>
         </ion-grid>
       </Host>

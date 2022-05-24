@@ -1,0 +1,1 @@
+import{r as o,h as r}from"./p-c6c344a2.js";let s=class{constructor(r){o(this,r)}render(){return r("ion-card",null,r("slot",null))}};s.style=":host{display:block}";export{s as mynt_make_post_dropdown}

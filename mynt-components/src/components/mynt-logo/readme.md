@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type     | Default          |
+| -------- | --------- | ----------- | -------- | ---------------- |
+| `image`  | `image`   |             | `string` | `"myntlogo.svg"` |
+
+
 ## Dependencies
 
 ### Used by

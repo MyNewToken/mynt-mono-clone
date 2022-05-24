@@ -4,6 +4,7 @@ import { reactOutputTarget as react } from '@stencil/react-output-target';
 export const config: Config = {
   namespace: 'mynt-components',
   outputTargets: [
+    /**
     react({
       componentCorePackage: 'mynt-components',
       proxiesFile: '../mynt-app/src/components/stencil-generated/index.ts',
@@ -13,8 +14,10 @@ export const config: Config = {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
+     */
     {
-      type: 'dist-custom-elements',
+      type: 'dist',
+      //dir: '../mynt-qwik/dist/stencil-components'
     },
     {
       type: 'docs-readme',

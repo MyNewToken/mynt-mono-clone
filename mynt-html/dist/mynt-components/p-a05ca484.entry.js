@@ -1,0 +1,1 @@
+import{r,h as s}from"./p-c6c344a2.js";let t=class{constructor(s){r(this,s)}render(){return s("ion-card",null)}};t.style=":host{display:block}";export{t as mynt_asset}

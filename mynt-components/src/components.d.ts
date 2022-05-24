@@ -58,6 +58,7 @@ export namespace Components {
         "create_account": boolean;
     }
     interface MyntLogo {
+        "image": string;
     }
     interface MyntMakePost {
     }
@@ -91,6 +92,8 @@ export namespace Components {
         "profPicSrc": string;
         "text": string;
         "user": string;
+    }
+    interface MyntProfile {
     }
     interface MyntProfileHeader {
     }
@@ -305,6 +308,12 @@ declare global {
         prototype: HTMLMyntPostElement;
         new (): HTMLMyntPostElement;
     };
+    interface HTMLMyntProfileElement extends Components.MyntProfile, HTMLStencilElement {
+    }
+    var HTMLMyntProfileElement: {
+        prototype: HTMLMyntProfileElement;
+        new (): HTMLMyntProfileElement;
+    };
     interface HTMLMyntProfileHeaderElement extends Components.MyntProfileHeader, HTMLStencilElement {
     }
     var HTMLMyntProfileHeaderElement: {
@@ -442,6 +451,7 @@ declare global {
         "mynt-page": HTMLMyntPageElement;
         "mynt-page-menu": HTMLMyntPageMenuElement;
         "mynt-post": HTMLMyntPostElement;
+        "mynt-profile": HTMLMyntProfileElement;
         "mynt-profile-header": HTMLMyntProfileHeaderElement;
         "mynt-root": HTMLMyntRootElement;
         "mynt-sell-asset": HTMLMyntSellAssetElement;
@@ -515,6 +525,7 @@ declare namespace LocalJSX {
         "create_account"?: boolean;
     }
     interface MyntLogo {
+        "image"?: string;
     }
     interface MyntMakePost {
     }
@@ -548,6 +559,8 @@ declare namespace LocalJSX {
         "profPicSrc"?: string;
         "text"?: string;
         "user"?: string;
+    }
+    interface MyntProfile {
     }
     interface MyntProfileHeader {
     }
@@ -621,6 +634,7 @@ declare namespace LocalJSX {
         "mynt-page": MyntPage;
         "mynt-page-menu": MyntPageMenu;
         "mynt-post": MyntPost;
+        "mynt-profile": MyntProfile;
         "mynt-profile-header": MyntProfileHeader;
         "mynt-root": MyntRoot;
         "mynt-sell-asset": MyntSellAsset;
@@ -673,6 +687,7 @@ declare module "@stencil/core" {
             "mynt-page": LocalJSX.MyntPage & JSXBase.HTMLAttributes<HTMLMyntPageElement>;
             "mynt-page-menu": LocalJSX.MyntPageMenu & JSXBase.HTMLAttributes<HTMLMyntPageMenuElement>;
             "mynt-post": LocalJSX.MyntPost & JSXBase.HTMLAttributes<HTMLMyntPostElement>;
+            "mynt-profile": LocalJSX.MyntProfile & JSXBase.HTMLAttributes<HTMLMyntProfileElement>;
             "mynt-profile-header": LocalJSX.MyntProfileHeader & JSXBase.HTMLAttributes<HTMLMyntProfileHeaderElement>;
             "mynt-root": LocalJSX.MyntRoot & JSXBase.HTMLAttributes<HTMLMyntRootElement>;
             "mynt-sell-asset": LocalJSX.MyntSellAsset & JSXBase.HTMLAttributes<HTMLMyntSellAssetElement>;

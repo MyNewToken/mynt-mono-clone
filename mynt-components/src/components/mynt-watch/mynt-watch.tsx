@@ -21,7 +21,7 @@ export class MyntWatch {
     const min = max - 20;
 
     for (var i = min; i < max; i++) {
-      var cmp = <mynt-grid-row numCols={4}></mynt-grid-row>;
+      var cmp = <mynt-grid-row numCols={10}></mynt-grid-row>;
       //this might work but also I may need to wrap the infinite scroll or something in a ion-grid
       //not working because you can't change an @State from outside the component
       //ohhhhhh use a prop for this

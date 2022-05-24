@@ -14,7 +14,8 @@ export class MyntMakePost {
   @State() sendAsset: boolean = false;
   @State() markNSFW: boolean = false;
 
-  async toggleController() {
+/**
+  async newToggleController(changed) {
     if (this.createACoin) {
       this.presentCreateCoin();
     } else if (this.viewRestrictions) {
@@ -27,75 +28,89 @@ export class MyntMakePost {
       this.presentMarkNSFW();
     }
   }
+**/
 
-  async presentCreateCoin() {
-    const popover = await popoverController.create({
-      component: 'mynt-create-coin',
-      //cssClass: 'my-custom-class',//////CHANGE
-      translucent: true
-    });
-    await popover.present();
-
-    const { role } = await popover.onDidDismiss();
-    this.createACoin = false;
-    console.log('onDidDismiss resolved with role', role);
+  async presentCreateCoin(ev) {
+    if (!this.createACoin) {
+      this.createACoin = ev.detail.checked
+      const popover = await popoverController.create({
+        component: 'mynt-create-coin',
+        //cssClass: 'my-custom-class',//////CHANGE
+        translucent: true
+      });
+      await popover.present();
+  
+      const { role } = await popover.onDidDismiss();
+      console.log('onDidDismiss resolved with role', role);
+    }
+    this.createACoin = ev.detail.checked;
   }
 
-  async presentViewingRestrictions() {
-    const popover = await popoverController.create({
-      component: 'mynt-viewing-restrictions',
-      //cssClass: 'my-custom-class',//////CHANGE
-      translucent: true
-    });
-    await popover.present();
-
-    const { role } = await popover.onDidDismiss();
-    this.viewRestrictions = false;
-    console.log('onDidDismiss resolved with role', role);
+  async presentViewingRestrictions(ev) {
+    if (!this.markNSFW) {
+      const popover = await popoverController.create({
+        component: 'mynt-viewing-restrictions',
+        //cssClass: 'my-custom-class',//////CHANGE
+        translucent: true
+      });
+      await popover.present();
+  
+      const { role } = await popover.onDidDismiss();
+      this.viewRestrictions = false;
+      console.log('onDidDismiss resolved with role', role);
+    }
+    this.markNSFW = ev.detail.checked;
   }
 
-  async presentSellAsset() {
-    const popover = await popoverController.create({
-      component: 'mynt-sell-asset',
-      //cssClass: 'my-custom-class',//////CHANGE
-      translucent: true
-    });
-    await popover.present();
-
-    const { role } = await popover.onDidDismiss();
-    this.sellAsset = false;
-    console.log('onDidDismiss resolved with role', role);
+  async presentSellAsset(ev) {
+    if (!this.sellAsset) {
+      const popover = await popoverController.create({
+        component: 'mynt-sell-asset',
+        //cssClass: 'my-custom-class',//////CHANGE
+        translucent: true
+      });
+      await popover.present();
+  
+      const { role } = await popover.onDidDismiss();
+      this.sellAsset = false;
+      console.log('onDidDismiss resolved with role', role);
+    }
+    this.sellAsset = ev.detail.checked;
   }
 
-  async presentSendAsset() {
-    const popover = await popoverController.create({
-      component: 'mynt-send-asset',
-      //cssClass: 'my-custom-class',//////CHANGE
-      translucent: true
-    });
-    await popover.present();
-
-    const { role } = await popover.onDidDismiss();
-    this.sendAsset = false;
-    console.log('onDidDismiss resolved with role', role);
+  async presentSendAsset(ev) {
+    if (!this.sendAsset) {
+      const popover = await popoverController.create({
+        component: 'mynt-send-asset',
+        //cssClass: 'my-custom-class',//////CHANGE
+        translucent: true
+      });
+      await popover.present();
+  
+      const { role } = await popover.onDidDismiss();
+      this.sendAsset = false;
+      console.log('onDidDismiss resolved with role', role);
+    }
+    this.sendAsset = ev.detail.checked;
   }
 
-  async presentMarkNSFW() {
-    const popover = await popoverController.create({
-      component: 'mynt-mark-nsfw',
-      //cssClass: 'my-custom-class',//////CHANGE
-      translucent: true
-    });
-    await popover.present();
-
-    const { role } = await popover.onDidDismiss();
-    this.markNSFW = false;
-    console.log('onDidDismiss resolved with role', role);
+  async presentMarkNSFW(ev) {
+    if (!this.markNSFW) {
+      const popover = await popoverController.create({
+        component: 'mynt-mark-nsfw',
+        //cssClass: 'my-custom-class',//////CHANGE
+        translucent: true
+      });
+      await popover.present();
+  
+      const { role } = await popover.onDidDismiss();
+      this.markNSFW = false;
+      console.log('onDidDismiss resolved with role', role);
+    }
+    this.markNSFW = ev.detail.checked;
   }
 
   render() {
-
-    this.toggleController();
 
     return (
       <ion-card class="make-post">
@@ -116,11 +131,11 @@ export class MyntMakePost {
           <ion-label>No files currently added to mynt</ion-label>
         </ion-item>
         <ion-item>
-          <ion-toggle checked={this.createACoin} onIonChange={(ev) => this.createACoin = ev.detail.checked}></ion-toggle><ion-label>Create a Coin</ion-label>
-          <ion-toggle checked={this.viewRestrictions} onIonChange={(ev) => this.viewRestrictions = ev.detail.checked}></ion-toggle><ion-label>Viewing Restrictions</ion-label>
-          <ion-toggle checked={this.sellAsset} onIonChange={(ev) => this.sellAsset = ev.detail.checked}></ion-toggle><ion-label>Sell an Asset</ion-label>
-          <ion-toggle checked={this.sendAsset} onIonChange={(ev) => this.sendAsset = ev.detail.checked}></ion-toggle><ion-label>Send an Asset</ion-label>
-          <ion-toggle checked={this.markNSFW} onIonChange={(ev) => this.markNSFW = ev.detail.checked}></ion-toggle><ion-label>Mark as NSFW</ion-label>
+          <ion-toggle checked={this.createACoin} onIonChange={(ev) => this.presentCreateCoin(ev)}></ion-toggle><ion-label>Create a Coin</ion-label>
+          <ion-toggle checked={this.viewRestrictions} onIonChange={(ev) => this.presentViewingRestrictions(ev)}></ion-toggle><ion-label>Viewing Restrictions</ion-label>
+          <ion-toggle checked={this.sellAsset} onIonChange={(ev) => this.presentSellAsset(ev)}></ion-toggle><ion-label>Sell an Asset</ion-label>
+          <ion-toggle checked={this.sendAsset} onIonChange={(ev) => this.presentSendAsset(ev)}></ion-toggle><ion-label>Send an Asset</ion-label>
+          <ion-toggle checked={this.markNSFW} onIonChange={(ev) => this.presentMarkNSFW(ev)}></ion-toggle><ion-label>Mark as NSFW</ion-label>
         </ion-item>
       </ion-card>
     );

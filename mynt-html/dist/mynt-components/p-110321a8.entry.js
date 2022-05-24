@@ -1,0 +1,1 @@
+import{r as s,h as t}from"./p-c6c344a2.js";let r=class{constructor(t){s(this,t)}render(){return t("mynt-viewing-restrictions",null)}};r.style=":host{display:block}";export{r as mynt_sell_asset}
