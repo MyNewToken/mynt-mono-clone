@@ -1,10 +1,13 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'mynt-root',
   styleUrl: 'mynt-root.css',
 })
+
 export class MyntRoot {
+
+  @Prop() src: string = "";
 
   render() {
     return (

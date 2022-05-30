@@ -4,6 +4,7 @@ export const Root = () => {
   return (
     <html>
       <head>
+        /** metaEvent?: goes in meta tag*/
         <meta charSet="utf-8" />
         <title>Qwik Blank App</title>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
@@ -13,7 +14,7 @@ export const Root = () => {
         <script noModule src="/dist/esm/mynt-components.js"></script>
       </head>
       <body>
-        <mynt-root></mynt-root>
+        <mynt-root src=""></mynt-root>
       </body>
     </html>
   );
